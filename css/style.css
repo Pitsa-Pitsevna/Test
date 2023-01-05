@@ -1,0 +1,454 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/* добавили эту часть в 3 уроке */
+img {
+    display: block;
+    max-width: 100%;
+}
+/* добавили эту часть в 3 уроке */
+    /* добавили эту часть во 2 уроке */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+        /* добавили эту часть во 2 уроке */
+body {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+:root {
+    --accent-color: #F7654A;
+    --dark-color: #404149;
+    --grey-color: #999999;
+    --white-color: #ffffff;
+    --background-color: #E5E5E5;
+}
+/* Стили для текста */
+.text-h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    text-transform: uppercase;
+}
+.text-h3 {
+    font-family: 'Oswald';;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px; 
+}
+.text-h4 {
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 31px;
+    letter-spacing: 0.02em;
+}
+.text-p {
+font-family: 'Open Sans';
+font-size: 16px;
+line-height: 22px;
+}
+.text-p-reviews {
+font-family: 'Open Sans';
+font-size: 14px;
+line-height: 21px;
+}
+
+/* font-family: "Open Sans", sans-serif;
+   font-family: "Oswald";, sans-serif;
+ */
+ /* часть 1 */
+
+.header {
+    min-height: 740px;
+    background-image: url(../img/first-scr.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header__title {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 112px;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+}
+.burger {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding: 0;
+    background-color: var(--accent-color);
+    bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.burger__line {
+    display: block;
+    width: 21px;
+    height: 3px;
+    background-color: #ffffff;
+    margin-bottom: 4px;
+}
+.burger__line:last-child {
+    margin-bottom: 0;
+}
+.h1 {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 95px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-color);
+    max-width: 734px;
+    margin: 0 auto 17px;
+}
+/* этот медиазапрос добавили для очень маленьких экранов (в 5 части) */
+@media screen and (max-width: 380px) {
+    h1 {
+        font-size: 46px;
+        line-height: 64px;
+    }
+}
+/* этот медиазапрос добавили для очень маленьких экранов (в 5 части) */
+.h4 {
+    margin: 0 auto;
+    max-width: 734px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+/* часть 2 */
+
+.about {
+    padding-top: 250px;
+    min-height: 1080px;
+    position: relative;
+}
+.info {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F7F7F7;
+    max-width: 1110px;
+    width: 100%;
+    min-height: 300px;
+    padding: 57px 130px;
+}
+.about__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+.about__grid-item {
+    text-align: center;
+    width: 190px;
+}
+
+.about__h4 {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 72px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.about__h5 {
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+.about__p {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: var(--grey-color);
+}
+
+/* медиазапрос для мобильных устройств */
+@media screen and (max-width: 1280px) {
+    .about__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 768px) {
+    .info {
+        position: relative;
+        padding: 30px 0;
+    }
+    .about__grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+/* часть 3 */
+
+.project-h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.about__flex {
+    display: flex;
+}
+.about__flex-item {
+    max-width: 350px;
+    margin-right: 30px;
+}
+.about__flex-item:last-child {
+    margin-right: 0;
+}
+.project-img {
+    margin-bottom: 45px;
+}
+.rectangle {
+    width: 55px;
+    height: 6px;
+    background-color: var(--accent-color);
+    margin-bottom: 15px;
+}
+.roject-h3 {
+    color: var(--dark-color);
+    margin-bottom: 13px;
+}
+.project-p {
+    color: var(--grey-color);
+}
+/* медиазапрос для мобильных устройств */
+@media screen and (max-width: 1280px) {
+    .about {
+        padding: 450px 15px 110px 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about {
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+    .about__flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__flex-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .about__flex-item:last-child {
+        margin-bottom: 0;
+    }
+}
+/* часть 4 */
+.request {
+    background-color: var(--accent-color);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.request_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.request_flex-left {
+    color: var(--white-color);
+}
+.request__h4 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.request__h5 {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+/* .request_flex-right { пока это не используется
+} */
+.request__btn {
+    margin-top: 20px;
+    border: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-style: 14px;
+    line-height: 21px;
+    letter-spacing: 0,05em;
+    padding: 14px 30px;
+}
+.request__icon {
+    margin-right: 15px;
+}
+/* медиазапрос для мобильных устройств */
+@media screen and (max-width: 1280px) {
+    .request {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .request_flex {
+        flex-wrap: wrap;
+    }
+}
+
+/* часть 5 */
+.services {
+    padding: 150px 0;
+}
+.section__h2, .services__h4 {
+    text-align: center;
+    color: #000;
+} 
+.section__h2 {
+    margin-bottom: 55px;
+}
+.services__h4 {
+    margin: 0 auto;
+    max-width: 172px;
+    text-transform: uppercase;
+}
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+.services__grid-item {
+    padding: 59px 0;
+    background-color: #F7F7F7;
+    width: 350px;
+}
+.services__icon {
+    margin: 0 auto 21px;
+}
+/* медиазапрос для мобильных устройств */
+@media screen and (max-width: 1280px) {
+    .services{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .services__grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .services__grid-item{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .services__grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* часть 6 */
+
+/* .portfolio { пока не используем. Удалять не будем на случай, если понадобятся изменения
+} */
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 0;
+}
+/* .potfolio__grid-item {
+} */
+/* .potfolio {
+} */
+/* медиазапрос для мобильных устройств - адаптивная версия */
+@media screen and (max-width: 1280px) {
+    .portfolio__grid {
+        grid-template-columns: repeat(2, 1fr);
+        }
+}
+@media screen and (max-width: 768px) {
+    .portfolio__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* часть 7 */
+
+.question {
+    padding-top: 150px;
+    padding-bottom: 110px;
+}
+.question .section__h2 { 
+    /* здесь мы пишем через пробел, т.к. ищем класс внутри .question (внутри дочерний элемент) */
+    margin-bottom: 50px;
+}
+/* .question_items {
+}
+.question_item {
+} */
+.question_h3 {
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 23px;
+}
+.question_p {
+    margin-bottom: 40px;
+    color: var(--grey-color);
+    max-width: 730px;
+}
+.question_h3.close {
+    /* отдельно для закрытых заголовков отступ, чтобы совпадало с макетом */
+    margin-bottom: 31px;
+}
+.question_h3.open::before,
+.question_h3.close::before {
+    /* здесь мы пишем слитно, это означет, что у элемента должно быть одновременно 2 класса */
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/arrow-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 14px;
+}
+.question_h3.open::before {
+    transform: rotate(-90deg);
+    /* это свойство transform: rotate(90deg); позволяет нам повернуть наш элемент на 90градусов,
+    при помощи минут мы поворачиваем, чтобы стрелочка смотрела вверх или вниз */
+}
+.question_h3.close + .question_p {
+    /* позволяет настраивать .question_p, который находится рядом с .question_h3.close  */
+    display: none;
+}
+@media screen and (max-width: 1280px) {
+    .question {
+        padding: 150px 15px 110px;
+    }
+}
+@media screen and (max-width: 768px) {
+}
